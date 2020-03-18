@@ -16,8 +16,8 @@ class NewStudentModal extends Component {
     render() {
         const create = this.props.create;
 
-        var title = "Editing Student";
-        var button = <Button onClick={this.toggle}>Edit</Button>;
+        let title = "Editing Student";
+        let button = <Button onClick={this.toggle}>Edit</Button>;
         if (create) {
             title = "Creating New Student";
 
@@ -28,7 +28,7 @@ class NewStudentModal extends Component {
                     onClick={this.toggle}
                     style={{ minWidth: "200px" }}
                 >
-                    Create New
+                    Adicionar aluno
                 </Button>
             );
         }

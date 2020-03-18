@@ -49,7 +49,7 @@ class NewStudentForm extends React.Component {
         return (
             <Form onSubmit={this.props.student ? this.editStudent : this.createStudent}>
                 <FormGroup>
-                    <Label for="name">Name:</Label>
+                    <Label for="name">Nome:</Label>
                     <Input
                         type="text"
                         name="name"
@@ -67,7 +67,7 @@ class NewStudentForm extends React.Component {
                     />
                 </FormGroup>
                 <FormGroup>
-                    <Label for="document">Document:</Label>
+                    <Label for="document">RA:</Label>
                     <Input
                         type="text"
                         name="document"
@@ -76,7 +76,7 @@ class NewStudentForm extends React.Component {
                     />
                 </FormGroup>
                 <FormGroup>
-                    <Label for="phone">Phone:</Label>
+                    <Label for="phone">Telefone:</Label>
                     <Input
                         type="text"
                         name="phone"
@@ -84,7 +84,7 @@ class NewStudentForm extends React.Component {
                         value={this.defaultIfEmpty(this.state.phone)}
                     />
                 </FormGroup>
-                <Button>Send</Button>
+                <Button>Adicionar</Button>
             </Form>
         );
     }

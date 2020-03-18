@@ -10,11 +10,11 @@ class StudentList extends Component {
             <Table dark>
                 <thead>
                     <tr>
-                        <th>Name</th>
+                        <th>Nome</th>
                         <th>Email</th>
-                        <th>Document</th>
-                        <th>Phone</th>
-                        <th>Registration</th>
+                        <th>RA</th>
+                        <th>Telefone</th>
+                        <th>Data de Criação</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -22,12 +22,12 @@ class StudentList extends Component {
                     {!students || students.length <= 0 ? (
                         <tr>
                             <td colSpan="6" align="center">
-                                <b>Ops, no one here yet</b>
+                                <b>Ops, não há nenhum aluno cadastrado</b>
                             </td>
                         </tr>
                     ) : (
                             students.map(student => (
-                                <tr key={student.pk}>
+                                <tr key={student.id}>
                                     <td>{student.name}</td>
                                     <td>{student.email}</td>
                                     <td>{student.document}</td>
@@ -39,9 +39,9 @@ class StudentList extends Component {
                                             student={student}
                                             resetState={this.props.resetState}
                                         />
-                  &nbsp;&nbsp;
-                  <ConfirmRemovalModal
-                                            pk={student.pk}
+                                        &nbsp;&nbsp;
+                                        <ConfirmRemovalModal
+                                            pk={student.id}
                                             resetState={this.props.resetState}
                                         />
                                     </td>

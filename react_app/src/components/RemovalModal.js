@@ -27,24 +27,24 @@ class ConfirmRemovalModal extends Component {
         return (
             <Fragment>
                 <Button color="danger" onClick={() => this.toggle()}>
-                    Remove
-        </Button>
+                    Remover
+                </Button>
                 <Modal isOpen={this.state.modal} toggle={this.toggle}>
                     <ModalHeader toggle={this.toggle}>
-                        Do you really wanna delete the student?
-          </ModalHeader>
+                       Realmente deseja exluir este aluno?
+                    </ModalHeader>
 
                     <ModalFooter>
                         <Button type="button" onClick={() => this.toggle()}>
-                            Cancel
-            </Button>
+                            Cancelar
+                        </Button>
                         <Button
                             type="button"
                             color="primary"
                             onClick={() => this.deleteStudent(this.props.pk)}
                         >
-                            Yes
-            </Button>
+                            Sim
+                        </Button>
                     </ModalFooter>
                 </Modal>
             </Fragment>

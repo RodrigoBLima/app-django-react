@@ -37,7 +37,10 @@ class Home extends Component {
                 </Row>
                 <Row>
                     <Col>
-                        <NewStudentModal create={true} resetState={this.resetState} />
+                        <NewStudentModal
+                            create={true}
+                            resetState={this.resetState}
+                        />
                     </Col>
                 </Row>
             </Container>
